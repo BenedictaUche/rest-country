@@ -1,0 +1,13 @@
+.app {
+    min-height: 100vh;
+}
+
+.app.dark {
+    background-color: var(--dark-bg);
+    color: var(--white);
+}
+
+.app.light {
+    background-color: var(--light-bg);
+    color: var(--light-text);
+}
