@@ -26,9 +26,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.theme = this.themeService.node$;
-    // this.api.getAllCountries().subscribe((data) => {
-    //   console.log(data);
-    // });
+    this.api.getAllCountries().subscribe((data) => {
+      console.log(data);
+    });
   }
 
   // toggleTheme() {
