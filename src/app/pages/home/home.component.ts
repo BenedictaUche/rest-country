@@ -19,5 +19,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.countries$ = this.api.getAllCountries();
+
+    this.countries$.subscribe((data) => {
+      console.log(data);
+    });
   }
 }

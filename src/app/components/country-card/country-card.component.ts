@@ -3,6 +3,8 @@ import { Country } from '../../types/api';
 import { NgIf } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { ApiService } from '../../service/api.service';
+
 
 @Component({
   selector: 'app-country-card',

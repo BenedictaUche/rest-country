@@ -1,1 +1,4 @@
-<p>detail works!</p>
+<div *ngIf="country$ | async; let country" >
+    <!-- <pre>{{ country | json }}</pre> -->
+    <img [src]="country.flags.png" alt="flag" />
+</div>
