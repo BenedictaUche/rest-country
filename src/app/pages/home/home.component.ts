@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../service/api.service';
 import { Observable } from 'rxjs';
 import { Country } from '../../types/api';
+import { CountryCardComponent } from '../../components/country-card/country-card.component';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CountryCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

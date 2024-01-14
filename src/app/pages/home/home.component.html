@@ -1,5 +1,6 @@
 <div>
-    <div *ngFor="let country of countries$ | async ">
-        {{ country.region }}
-    </div>
+    <app-country-card *ngFor="let country of countries$ | async ">
+        [country]="country"
+    </app-country-card>
+
 </div>

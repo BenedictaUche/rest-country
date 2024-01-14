@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ThemeService, Theme } from './service/theme.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HttpClientModule } from '@angular/common/http';
+
 import { ApiService } from './service/api.service';
 
 
@@ -26,9 +27,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.theme = this.themeService.node$;
-    this.api.getAllCountries().subscribe((data) => {
-      console.log(data);
-    });
+    // this.api.getAllCountries().subscribe((data) => {
+    //   console.log(data);
+    // });
   }
 
   // toggleTheme() {
