@@ -2,9 +2,65 @@
     padding: 0 1rem;
     display: grid;
     row-gap: 1rem;
-    @media (min-width: 376px){
-        grid-template-columns: repeat(4, 1fr);
-        column-gap: 1rem;
-        padding: 0 5rem;
+
+    @media (min-width: 376px) {
+      padding: 0 5rem;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 1rem;
     }
-}
+  }
+
+  .country-filters {
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 376px) {
+      margin: 2rem 5rem;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    app-dropdown {
+      width: 60%;
+      @media (min-width: 376px) {
+        width: 25%;
+      }
+    }
+  }
+
+  .search-filter {
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    padding: 1rem;
+    @media (min-width: 376px) {
+      width: 33%;
+    }
+    span {
+      font-size: 1rem;
+      padding-right: 0.5rem;
+    }
+    input {
+      font-size: 1rem;
+      border: none;
+      background-color: inherit;
+    }
+  }
+
+  :host-context(.light) {
+    .search-filter {
+      background-color: var(--light-element);
+      color: var(--light-input);
+      input::placeholder {
+        color: var(--light-input);
+      }
+    }
+  }
+
+  :host-context(.dark) {
+    .search-filter {
+      background-color: var(--dark-element);
+      color: var(--dark-text);
+      input::placeholder {
+        color: var(--dark-text);
+      }
+    }
+  }
