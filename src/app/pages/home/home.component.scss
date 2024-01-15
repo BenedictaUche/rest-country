@@ -1,0 +1,10 @@
+.country-cards {
+    padding: 0 1rem;
+    display: grid;
+    row-gap: 1rem;
+    @media (min-width: 376px){
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1rem;
+        padding: 0 5rem;
+    }
+}
