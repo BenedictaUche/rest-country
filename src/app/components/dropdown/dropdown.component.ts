@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './dropdown.component.scss'
 })
 export class DropdownComponent {
-  showOptions = true;
+  showOptions = false;
 
   @Input() options: any;
 
