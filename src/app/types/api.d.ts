@@ -17,6 +17,7 @@ export interface Country {
     translations: { [key: string]: Translation };
     latlng:       number[];
     landlocked:   boolean;
+    borders:      string[];
     area:         number;
     demonyms:     Demonyms;
     flag:         string;
@@ -77,6 +78,7 @@ export interface Maps {
     googleMaps:     string;
     openStreetMaps: string;
 }
+
 
 export interface Name {
     common:     string;

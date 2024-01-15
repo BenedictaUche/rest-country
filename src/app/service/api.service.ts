@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ApiService {
-  private api = 'https://restcountries.com/v3.1'
+  private api = 'https://restcountries.com/v3.1';
   constructor(private http: HttpClient) { }
 
   getAllCountries() {
@@ -15,12 +15,12 @@ export class ApiService {
   }
 
   getCountryByName(name: string) {
-    return this.http.get<Country>(`${this.api}/name/${name}`);
+    return this.http
+      .get<Country[]>(`${this.api}/name/${name}`)
+      .pipe(map((country) => country[0]));
   }
 
-  // getCountryByName(name: string) {
-  //   return this.http
-  //   .get<Country[]>(`${this.api}/name/${name}`)
-  //   .pipe(map(([ countries ]) => countries));
-  // }
+  getCountriesByCodes(codes: string[]) {
+    return this.http.get<Country[]>(`${this.api}/alpha?codes=${codes.join(';')}`);
+  }
 }
