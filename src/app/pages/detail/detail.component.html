@@ -6,13 +6,17 @@
 
   <div class="country-layout">
     <img [src]="country.flags.png" alt="flag" />
+
     <div class="country-detail">
+
       <h3>{{ country.name.common }}</h3>
+
       <div class="country-info">
+
         <div class="country-section">
           <p>
             <strong>Native Name:</strong>
-            {{ country.name.nativeName }}
+            {{ displayNativeName(country) }}
           </p>
           <p>
             <strong>Population:</strong>
@@ -32,6 +36,7 @@
             {{ country.capital }}
           </p>
         </div>
+
         <div class="country-section">
           <p>
             <strong>Top Level Domain:</strong>
@@ -39,22 +44,31 @@
           </p>
           <p>
             <strong>Currencies:</strong>
-            {{ displayCurrencies([country.currencies]) }}
+            {{ displayCurrencies(country.currencies) }}
           </p>
           <p>
             <strong>Languages:</strong>
-            {{ displayLanguages([country.languages]) }}
+            {{ displayLanguages(country.languages) }}
           </p>
         </div>
       </div>
+
       <div class="border-countries">
         <p><strong>Border Countries</strong></p>
-      <div *ngIf="borderCountries$ | async; let borderCountries" class="border-countries-buttons">
-        <div *ngFor="let borderCountry of borderCountries" class="button shadow" [routerLink]="'/' + borderCountry.name.common">
-          {{ borderCountry.name.common }}
+        <div
+          *ngIf="borderCountries$ | async; let borderCountries"
+          class="border-countries-buttons"
+        >
+          <div
+            *ngFor="let borderCountry of borderCountries"
+            class="button shadow"
+            [routerLink]="'/' + borderCountry.name.common"
+          >
+            {{ borderCountry.name.common }}
+          </div>
         </div>
       </div>
-    </div>
+
     </div>
   </div>
 </div>

@@ -71,6 +71,7 @@ export interface Idd {
 }
 
 export interface Languages {
+    // [x: string]: any;
     eng: string;
 }
 

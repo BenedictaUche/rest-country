@@ -26,7 +26,7 @@
         cursor: pointer;
     }
     &-layout{
-        @media (min-width: 376px) {
+        @media (min-width: 768px) {
             display: flex;
             justify-content: space-between;
             img {
@@ -35,13 +35,16 @@
         }
     }
     &-detail{
-        @media (min-width: 376px) {
-            width: 50%;
+        @media (min-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
     &-info{
-        @media (min-width: 376px) {
+        @media (min-width: 768px) {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
     }
@@ -52,9 +55,10 @@
         margin-bottom: 4rem;
         &-buttons {
             display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             column-gap: 0.5rem;
             row-gap: 1rem;
-            grid-template-columns: repeat(3, 1fr);
             grid-template-rows: 2rem;
             .button {
                 text-align: center;

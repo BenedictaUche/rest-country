@@ -24,6 +24,22 @@
             transform: translate(-50%, -50%);
         }
     }
+
+    @media (max-width: 767px) {
+        font-size: 14px;
+
+        &-info {
+          padding: 1.5rem;
+        }
+
+        &-img {
+          height: 150px;
+
+          img {
+            height: 100%;
+          }
+        }
+      }
 }
 
 :host-context(.dark) .country-card {
